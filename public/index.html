@@ -2,12 +2,32 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <meta name="description" content="NASA Daily">
+    <meta name="author" content="Sophie, Kitty, Jamie, Dragomir">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="public/style.css">
+
+    <title>NASA daily</title>
   </head>
+
   <body>
     <header>
-      <h1>Hello</h1>
+      <h1>NASA Daily</h1>
     </header>
 
+    <form id='dateform'>
+      <input type="date" id='datefield' name="date" min='1995-06-16' max=''>
+      <input type="submit">
+    </form>
+
+    <input type="submit" name="today" value="Today">
+
+    <div>
+      <h2 id='headingDate'></h2>
+      <img src='' id='image'>
+      <p id='res-text'></p>
+    </div>
+
   </body>
+  <script type="text/javascript" src='public/dom.js'></script>
 </html>
