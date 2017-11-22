@@ -1,0 +1,33 @@
+{
+  "name": "nasa-daily",
+  "version": "1.0.0",
+  "description": "Daily space updates  via Nasa API",
+  "main": "index.js",
+  "scripts": {
+    "test":  "tape ./public/test.js | tap-spec",
+    "start": "node ./src/server.js",
+    "coverage": "node_modules/.bin/istanbul cover node_modules/.bin/tape ./src/test.js"
+   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac-12/nasa-daily.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fac-12/nasa-daily/issues"
+  },
+  "homepage": "https://github.com/fac-12/nasa-daily#readme",
+  "dependencies": {
+    "eslint": "^4.11.0",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "istanbul": "^0.4.5",
+    "shot": "^4.0.4",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.8.0"
+  }
+}
