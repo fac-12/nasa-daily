@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/fac-12/nasa-daily#readme",
   "dependencies": {
-    "eslint": "^4.11.0",
     "request": "^2.83.0"
   },
   "devDependencies": {
@@ -28,6 +27,7 @@
     "istanbul": "^0.4.5",
     "shot": "^4.0.4",
     "tap-spec": "^4.1.1",
-    "tape": "^4.8.0"
+    "tape": "^4.8.0",
+    "eslint": "^4.11.0"
   }
 }
