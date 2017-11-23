@@ -1,4 +1,6 @@
 // const apiKey = require('../config.js');
+const apiKey = process.env.API_KEY;
+
 
 const fs = require('fs');
 const path = require('path');
