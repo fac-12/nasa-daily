@@ -4,6 +4,7 @@ var todayButton = document.getElementById('todayID');
 var title = document.getElementById('responseTitle');
 var image = document.getElementById('image');
 var infoText = document.getElementById('res-text');
+var background = document.getElementById('page');
 
 //Setting todays date for the form
 function setTodaysDate(){
@@ -68,8 +69,7 @@ todayButton.addEventListener('click', function(event) {
 
 //function that takes apiInfo from front end and renders
 function apiResponse(nasaData){
-
+  background.style.backgroundImage = "url('" + nasaData.url + "')";
   title.innerText = nasaData.title;
-  image.src = nasaData.url;
   infoText.innerText = nasaData.explanation;
 };

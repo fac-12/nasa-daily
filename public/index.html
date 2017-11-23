@@ -7,25 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="public/style.css">
     <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-    <title>NASA daily</title>
+    <title>Out of this world?</title>
   </head>
 
-  <body>
+  <body id='page'>
     <header>
       <h1>NASA Daily</h1>
     </header>
 
     <form id='dateform'>
       <input type="date" id='datefield' name="date" min="1995-06-16" max="">
-      <input type="submit">
+      <input type="submit" value="Search" class='submit'>
     </form>
 
     <input type="submit" class="tdbutton" name="today" value="Today" id="todayID">
 
     <div class = 'response'>
       <h2 id='responseTitle'></h2>
-      <img src='' id='image'>
-      <p id='res-text'></p>
+      <div class='text-container'>
+        <p id='res-text'></p>
+      </div>
     </div>
   </body>
   <script type="text/javascript" src='public/dom.js'></script>
