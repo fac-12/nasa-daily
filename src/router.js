@@ -10,7 +10,7 @@ const router = (req, res) => {
   } else if (req.url.indexOf('/date') !== -1) {
     apiHandler(req, res);
   } else {
-    res.writeHead(404, { 'Content-type': 'text/html' });
+    res.writeHead(404, { 'Content-type': 'text/plain' });
     res.end('unknown uri');
   }
 };
