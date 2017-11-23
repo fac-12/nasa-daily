@@ -1,4 +1,4 @@
-const apiKey = require('../config.js');
+// const apiKey = require('../config.js');
 
 const fs = require('fs');
 const path = require('path');
