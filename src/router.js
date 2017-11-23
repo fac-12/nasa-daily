@@ -1,7 +1,8 @@
 const { homeHandler, staticFileHandler, apiHandler } = require('./handler');
 
 const router = (req, res) => {
-  const url = req.url;
+  const { url } = req.url;
+
 
   if (url.indexOf('public') !== -1) {
     staticFileHandler(req, res, url);
