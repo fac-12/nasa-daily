@@ -1,6 +1,6 @@
 /*eslint-disable*/
 var dateform = document.getElementById('dateform');
-var todayButton = document.getElementById('today');
+var todayButton = document.getElementById('todayID');
 var title = document.getElementById('responseTitle');
 var image = document.getElementById('image');
 var infoText = document.getElementById('res-text');
@@ -23,36 +23,37 @@ setTodaysDate();
 //event listener for the form/datefield
 dateform.addEventListener('submit', function(event) {
   event.preventDefault();
-  var inputDate = event.target[0].value;
-  var url = '/date';
+  var input = event.target[0].value;
+  console.log(input)
+  var url = '/date=' + input;
   var xhr = new XMLHttpRequest();
   var obj;
 
   xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4) {
-      if (xhr.status === 200) {
+    if (xhr.readyState == 4) {
+      if (xhr.status == 200) {
         responseObj = JSON.parse(xhr.responseText);
         apiResponse(responseObj);
       } else {
         alert('Oh no something went wrong');
       }
     }
-  }
+  };
   xhr.open("GET", url, true);
-  xhr.send(inputDate);
+  xhr.send();
 });
 
 //event listener for today's date button
-todayButton.addEventListener('submit', function(event) {
+todayButton.addEventListener('click', function(event) {
   event.preventDefault();
-  var todayDate = document.getElementById('datefield').getAttribute('max');
-  var url = '/date';
+  var today = document.getElementById('datefield').getAttribute('max');
+  var url = '/date=' + today;
   var xhr = new XMLHttpRequest();
   var obj;
 
   xhr.onreadystatechange = function() {
-    if(xhr.readyState === 4) {
-      if (xhr.status === 200) {
+    if(xhr.readyState == 4) {
+      if (xhr.status == 200) {
         responseObj = JSON.parse(xhr.responseText);
         apiResponse(responseObj);
       } else {
@@ -61,13 +62,13 @@ todayButton.addEventListener('submit', function(event) {
     }
   }
   xhr.open("GET", url, true);
-  xhr.send(todayDate);
+  xhr.send();
 });
 
 
 //function that takes apiInfo from front end and renders
 function apiResponse(nasaData){
-  JSON.parse(nasaData);
+
   title.innerText = nasaData.title;
   image.src = nasaData.url;
   infoText.innerText = nasaData.explanation;
