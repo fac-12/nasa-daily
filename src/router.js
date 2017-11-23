@@ -10,8 +10,8 @@ const router = (req, res) => {
   } else if (req.url.indexOf('/date') !== -1) {
     apiHandler(req, res);
   } else {
-    res.writeHead(404);
-    res.end('404, File not found!');
+    res.writeHead(404, { 'Content-type': 'text/plain' });
+    res.end('unknown uri');
   }
 };
 
