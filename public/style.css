@@ -65,7 +65,7 @@ img {
   width: 400px;
   height: 400px;
 }
-#res-text {
+.responseText {
   width: 80vw;
 }
 h1, h2, .text-container {
