@@ -5,6 +5,7 @@ var title = document.getElementById('responseTitle');
 var image = document.getElementById('image');
 var infoText = document.getElementById('res-text');
 var background = document.getElementById('page');
+var datefield = document.getElementById('datefield');
 
 //Setting todays date for the form
 function setTodaysDate(){
@@ -45,8 +46,11 @@ dateform.addEventListener('submit', function(event) {
 
 //event listener for today's date button
 todayButton.addEventListener('click', function(event) {
+  //clear to dd/mm/yyyy
   event.preventDefault();
-  var today = document.getElementById('datefield').getAttribute('max');
+
+  var today = datefield.getAttribute('max');
+  datefield.value = today;
   var url = '/date=' + today;
   var xhr = new XMLHttpRequest();
   var obj;
