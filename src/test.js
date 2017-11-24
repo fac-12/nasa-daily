@@ -46,11 +46,3 @@ const testObj = {
       "title": "Alnitak, Alnilam, Mintaka",
       "url": "https://apod.nasa.gov/apod/image/1711/BeltStars_nouroozi1024.jpg"
     }
-
-// test('Api route'), (t) => {
-//   shot.inject(router, { method: 'get', url:}, (res) => {
-//     t.equal(res.statusCode, 200, 'should respond with a status code of 200');
-//     t.equal(typeof responseObj, 'string', 'response object should be a string');
-//     t.end();
-//   })
-// };

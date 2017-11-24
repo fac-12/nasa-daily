@@ -25,7 +25,6 @@ setTodaysDate();
 dateform.addEventListener('submit', function(event) {
   event.preventDefault();
   var input = event.target[0].value;
-  console.log(input)
   var url = '/date=' + input;
   var xhr = new XMLHttpRequest();
   var obj;
