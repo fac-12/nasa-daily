@@ -1,4 +1,4 @@
-### **NASA Daily** 
+### **NASA Daily**
 ![](https://api.travis-ci.org/fac-12/nasa-daily.svg?branch=master)
 
 A website which allows the user to recieve daily pictures from space :alien: :full_moon: :rocket:
@@ -9,9 +9,11 @@ View the live site [here](https://nasadaily.herokuapp.com/).
 
 **How to install locally:**
 1. [Clone this repo](http://github.com/fac-12/nasa-daily)
-2. run `npm i` in your terminal
-3. run `npm start` in your terminal to start our server
-4. Open https://localhost:8000 in your browser
+2. Create a file called app-env that includes this: `export API_KEY=`followed by your NASA API key 
+3. Run `source app-env` in your terminal
+4. run `npm i` in your terminal
+5. run `npm start` in your terminal to start our server
+6. Open https://localhost:8000 in your browser
 
 **How to run tests:**
 1. Once you've cloned the repo, run `npm test`
