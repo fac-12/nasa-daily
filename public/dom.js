@@ -22,19 +22,26 @@ function setTodaysDate(){
 }
 setTodaysDate();
 
+
 //event listener for the form/datefield
 dateform.addEventListener('submit', function(event) {
   event.preventDefault();
   var input = event.target[0].value;
   var url = '/date=' + input;
+
+  apiCall(url, apiResponse);
+});
+
+// This function makes an XHR request and response
+// It expects a url and a callback function which handles the parsed XHR response obj
+function apiCall(url, callback) {
   var xhr = new XMLHttpRequest();
-  var obj;
 
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4) {
       if (xhr.status == 200) {
-        responseObj = JSON.parse(xhr.responseText);
-        apiResponse(responseObj);
+        var responseObj = JSON.parse(xhr.responseText);
+        callback(responseObj);
       } else {
         alert('Oh no something went wrong');
       }
@@ -42,32 +49,16 @@ dateform.addEventListener('submit', function(event) {
   };
   xhr.open("GET", url, true);
   xhr.send();
-});
+}
 
-//event listener for today's date button
+
+
+// On click - set date input field to Today's date
 todayButton.addEventListener('click', function(event) {
-  //clear to dd/mm/yyyy
-  event.preventDefault();
-
   var today = datefield.getAttribute('max');
   datefield.value = today;
-  var url = '/date=' + today;
-  var xhr = new XMLHttpRequest();
-  var obj;
-
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4) {
-      if (xhr.status == 200) {
-        responseObj = JSON.parse(xhr.responseText);
-        apiResponse(responseObj);
-      } else {
-        alert('Oh no something went wrong');
-      }
-    }
-  }
-  xhr.open("GET", url, true);
-  xhr.send();
 });
+
 
 
 //function that takes apiInfo from front end and renders
