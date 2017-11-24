@@ -37,16 +37,13 @@ body {
   text-align: center;
 }
 
-.tdbutton {
-  margin-top: 3vh;
-}
-
 .tdbutton, .submit {
   background-color: white;
   border: 2px solid grey;
   height: 5vw;
   width: 10vw;
   font-size: 1rem;
+  margin-left: 2vw;
 }
 
 .form {
@@ -58,10 +55,6 @@ body {
   height: 5vw;
   font-size: 1rem;
   border: 2px solid grey;
-}
-
-.submit {
-  margin-left: 2vw;
 }
 
 .response, .tagline {
