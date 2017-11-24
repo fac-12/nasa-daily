@@ -19,14 +19,14 @@ test('Home route', (t) => {
   })
 })
 
-test('Check response object from 2017-11-23', (t) => {
-  shot.inject(router, { method: 'get', url: '/date=2017-11-23' }, (res) => {
-    var responseObj = JSON.parse(res.payload);
-    t.equal(res.statusCode, 200, 'should respond with a status code of 200');
-    t.deepEquals(responseObj, testObj, 'response object should match test object');
-    t.end();
-  })
-});
+// test('Check response object from 2017-11-23', (t) => {
+//   shot.inject(router, { method: 'get', url: '/date=2017-11-23' }, (res) => {
+//     var responseObj = JSON.parse(res.payload);
+//     t.equal(res.statusCode, 200, 'should respond with a status code of 200');
+//     t.deepEquals(responseObj, testObj, 'response object should match test object');
+//     t.end();
+//   })
+// });
 
 test('Check CSS file is returning', (t) => {
   shot.inject(router, { method: 'get', url: '/public/style.css'}, (res) => {
