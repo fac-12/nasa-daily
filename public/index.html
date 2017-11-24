@@ -11,21 +11,25 @@
   </head>
 
   <body id='page'>
-    <header>
-      <h1>NASA Daily</h1>
+    <header class='headContainer'>
+      <h1 class='heading'>NASA Daily</h1>
     </header>
 
-    <form id='dateform'>
-      <input type="date" id='datefield' name="date" min="1995-06-16" max="">
+    <div class='tagline'>
+      <p>Giving you your daily updates on NASA history</p>
+    </div>
+
+    <form id='dateform' class='form'>
+      <input class='dateInput' type="date" id='datefield' name="date" min="1995-06-16" max="">
       <input type="submit" value="Search" class='submit'>
     </form>
 
     <input type="submit" class="tdbutton" name="today" value="Today" id="todayID">
 
     <div class = 'response'>
-      <h2 id='responseTitle'></h2>
+      <h2 id='responseTitle' class='resTitle'></h2>
       <div class='text-container'>
-        <p id='res-text'></p>
+        <p class='responseText' id='res-text'></p>
       </div>
     </div>
   </body>

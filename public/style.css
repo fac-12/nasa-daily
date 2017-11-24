@@ -10,64 +10,76 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 100%;
   background-color: black;
-  background-image: url();
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-header {
+.headContainer, .tagline, .heading, body, .form, .tdbutton {
   justify-content: center;
+  align-items: center;
 }
 
-h1 {
-  justify-content: center;
+.tdbutton, .tagline, .form {
+  align-self: center;
+}
+
+.heading {
   font-size: 4rem;
   color: white;
 }
 
+.tagline {
+  font-size: 1rem;
+  width: 40vw;
+  margin: 1rem 0 1rem 0;
+  text-align: center;
+}
+
 .tdbutton {
-  width: 10vw;
-  justify-content: center;
-  align-self: center;
   margin-top: 3vh;
 }
 
-form {
-  width: 35vw;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
+.tdbutton, .submit {
+  background-color: white;
+  border: 2px solid grey;
+  height: 5vw;
+  width: 10vw;
+  font-size: 1rem;
 }
 
-#datefield {
+.form {
+  width: 35vw;
+}
+
+.dateInput {
   width: 100%;
   height: 5vw;
+  font-size: 1rem;
+  border: 2px solid grey;
 }
 
 .submit {
-  width: 10vw;
-  height: 5vw;
   margin-left: 2vw;
-  border: none;
-  backround-color: white;
 }
 
-.response {
+.response, .tagline {
   flex-direction: column;
   color: white;
-  align-items: center;
 }
 
-img {
-  width: 400px;
-  height: 400px;
+.resTitle {
+  align-self: center;
+  text-align: center;
+  padding: 1rem;
 }
-#res-text {
+
+.responseText {
   width: 80vw;
+  padding: 1rem;
 }
-h1, h2, .text-container {
+
+.heading, .resTitle, .text-container, .tagline{
   background: rgba(0,0,0,0.7);
 }
