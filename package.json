@@ -6,7 +6,7 @@
   "scripts": {
     "test": "tape ./src/test.js | tap-spec",
     "start": "node ./src/server.js",
-    "coverage": "node_modules/.bin/istanbul cover node_modules/.bin/tape ./src/test.js"
+    "coverage": "istanbul cover ./src/test.js"
   },
   "repository": {
     "type": "git",
